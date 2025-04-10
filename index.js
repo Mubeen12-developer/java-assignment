@@ -615,3 +615,163 @@
 // calculateloan(25000)
 // calculateloan(60000)
 
+// // ************** QUESTION NO.4 ******************* //
+
+// 5. Toll Booth System - Vehicle Fee Collection
+// 📌 Problem:
+//  A toll booth collects different tolls based on vehicle type:
+// Car → $5
+// Truck → $10
+// Bus → $8
+// If a vehicle doesn't have enough money, let it pass but record unpaid tolls.
+
+// // ************** ANSWER NO.4 ******************* //
+
+// let vechicle = prompt("enter vechicle name(bus,truck,car)");
+
+// let ammount = parseInt(prompt("enter the ammount of toll vechicle"));
+
+// let toll = vechicle === "car" ? 5 : vechicle==="bus" ? 8 :vechicle === "truck" ? 10: null;
+
+// if(toll === null) {
+//     document.write(`invalid car name`);
+// } else if (ammount>=toll) {
+//     document.write(`toll paid ${toll}`)
+// } else {
+//     document.write(`incuficent payment! toll is ${toll}, but you have ${ammount}, you may pass,but toll is unpaid`)
+// }
+
+/ // question 6
+// 6. School Exam Result Processing 
+// 📌 Problem:
+//  A class of 3 students takes 4 subjects. Generate random marks, find average & grade.
+// let students = ["hassan shah", "irfan shah","umer shah"];
+// let subject = ["math","physics","english","chemistry"];
+
+// const generateMarks = () => Math.floor(Math.random()*51)+51;
+
+// students.forEach(student =>{
+//     let marks = subject.map(generateMarks);
+//     let avg = marks.reduce((a,b)=>a+b,0)/subject.length;
+//     let grade = avg>=90?"A+": avg>=80?"A":avg>=70?"B":avg>=60?"C":avg>=50?"D":"F";
+
+//     document.write(`${student}  marks=[${marks.join(",")}]  Average=${avg.toFixed(2)}  Grade=${grade}<br> `)
+// })
+
+// // question 7
+// Problem Statement:
+// A university has 8 students who get random exam scores between 0 - 100. A student:
+// Passes if score ≥ 50
+// Fails if score < 50
+// The program calculates how many students passed and failed.
+// const generateScore = () => Math.floor(Math.random()*101);
+
+// let totalStudent = 8;
+// let students = [];
+
+// for (let i = 0; i < totalStudent; i++) {
+//     let score = generateScore();
+//     students.push(score);
+// }
+
+// let passedStudent = students.filter(score=> score>=50).length;
+// let failedStudent = students.filter(score=> score<50).length;
+
+// document.write(`student scores: ${students}<br> passed student: ${passedStudent}<br> failed student ${failedStudent}`)
+
+// question 
+// 7. Cinema Ticket Booking System 🎬🎟️
+// 📌 Problem Statement:
+//  A cinema has 10 seats available. Customers randomly book seats and pay based on age:
+// Children (0-12) → $5
+// Adults (13-59) → $10
+// Seniors (60+) → $7
+//  The program books seats until they are full and calculates total revenue.
+
+// let seat = 10;
+// let revenue = 0;
+
+// while (seat>0) {
+//     let age = Math.floor(Math.random()*80);
+
+//     let price = 0;
+//     if(age<=12) {
+//         price=5;
+//     }else if (age>=13 && age<59) {
+//         price = 10;
+//     } else {
+//         price = 7;
+//     }
+
+//     revenue+=price;
+//     seat--
+//     document.write(`seat booked for ${age} year old and the seat price is ${price} PKR<br>`)
+//     document.write(`${seat} seat are available<br>`)
+    
+// }
+// document.write(`total revenue ${revenue}<br>`)
+// document.write(`${seat} seat are available,all seat are booked`)
+
+
+// // question 
+// 8. Parking Lot Fee Calculation 🚗🅿️
+// 📌 Problem Statement:
+//  A parking lot has 15 cars parked. Each car is parked for a random number of hours (1-10 hours).
+// Up to 3 hours → $3 per hour
+// 4-6 hours → $2 per hour
+// 7+ hours → $1 per hour
+//  The program calculates total parking fees collected.
+
+// let car = 15;
+
+// let totalFess = 0;
+
+// for (let i = 1; i <= car; i++) {
+//     let hours = Math.floor(Math.random()*10)+1;
+//     let rate = hours<=3?"3":hours<=6?"2":"1";
+//     let fess = hours*rate;
+//     totalFess+=fess;
+//     document.write(`car ${i}: parked for ${hours} hours, and fess is${fess}<br>`)
+//     document.write(`total revenue is ${totalFess}`)
+// }
+
+
+// // question 
+// 9. Library Late Fee System 📚💰
+// 📌 Problem Statement:
+//  A library has 20 borrowers who return books late by 1-15 days.
+// 1-5 days late → $2 per day
+// 6-10 days late → $3 per day
+// 11+ days late → $5 per day
+//  The program calculates total late fees collected.
+
+// let totalBorrower = 20;
+// let lateFess = 0;
+
+// for (let i = 1; i <= totalBorrower; i++) {
+//     let lateDays = Math.floor(Math.random()*15)+1;
+//     let rate = lateDays<=5?"2":lateDays<=10?"3":"5";
+//     let fess = lateDays*rate;
+//     lateFess +=fess;
+//     document.write(`borrower ${i}: returned ${lateDays} days late and fess is ${fess}<br>`)
+// }
+
+
+// // question 10
+
+// A gas station serves 10 cars, each requesting a random amount of fuel (5-50 liters).
+// Up to 20 liters → $1.2 per liter
+// 21-35 liters → $1.0 per liter
+// 36+ liters → $0.8 per liter
+//  The program calculates total revenue from all cars.
+
+// let car = 10;
+// totalRevenue = 0;
+
+// for (let i = 1; i <=10; i++) {
+//     let ammtFuel=Math.floor(Math.random()*46)+5;
+//     let rate = ammtFuel<=20?"1.2":ammtFuel<=35?"1.0":"36";
+//     let cost = rate*ammtFuel;
+//     totalRevenue+=cost;
+//     document.write(`car ${i} requested ${ammtFuel} liter fuel,which is a cost of ${cost.toFixed(2)} PKR<br>`)
+// }
